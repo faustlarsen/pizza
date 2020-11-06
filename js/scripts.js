@@ -15,12 +15,19 @@ Pizza.prototype.sizePrice = function() {
   }
 }
 
-Pizza.prototype.price = function(xSize) {
-  let total = xSize;
+Pizza.prototype.price = function(xSize, xToppings) {
+  let total = xSize + xToppings;
   $("#total").html(total);
 }
 
-
+Pizza.prototype.toppingsPrice = function() {
+  if(this.toppings.length != 0) {
+    let topPrice = this.toppings.length + 1;
+    return topPrice;
+  } else {
+    alert("Choose the Toppings")
+  }
+}
 
 
 
@@ -41,8 +48,9 @@ $(document).ready(function(){
     let inputSize = $("input:radio[name=size]:checked").val();
     $("#name").text(inputName);
     $("#size").text(inputSize);
-    let pizza = new Pizza(inputSize);
+    let pizza = new Pizza(inputSize, topArray);
     let sizeVal = pizza.sizePrice();
-    pizza.price(sizeVal);
+    let toppingsVal = pizza.toppingsPrice();
+    pizza.price(sizeVal, toppingsVal);
   });
 });

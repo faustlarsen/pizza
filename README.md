@@ -13,18 +13,25 @@ A website where a user can customize a pizza by choosing a size, dough and diffe
 
 **Test**: Should return selected name, topping and size.
 
-**Input** Constantine, Medium, Mushrooms
+**Input**: Constantine, Medium, Mushrooms
 
 **Output**: Constantine, Medium, Mushrooms
 
 ________________________________________________________
 
-**Test**: Should return numeric value based on a selected size.
+**Test**: Should return numeric value in TOTAL based on a selected size.
 
 **Input** Small; Medium; Large;
 
 **Output**: 1; 2; 3;
+________________________________________________________
 
+**Test**: Should return (+1) in TOTAL based on a selected toppings
+
+**Input**: Mushrooms;
+
+**Output**: +1
+________________________________________________________
 
 
 

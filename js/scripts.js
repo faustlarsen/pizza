@@ -29,25 +29,25 @@ Pizza.prototype.toppingsPrice = function() {
   }
 }
 
-
-
 //BI LOGIC
 $(document).ready(function(){
   $("form#order").submit(function(event) {
     event.preventDefault();
     $("#result").show();
     let topArray = [];
-    
     $("input:checkbox[name=top]:checked").each(function(){
     let inputTop = $(this).val();
     topArray.push(inputTop);
     $("#toppings").text(inputTop);
     });
-
-    let inputName = $("#firstName").val();
+    let inputName = $("#iName").val();
+    let inputPhone = $("#iPhone").val();
+    let inputAddress = $("#iAddress").val();
     let inputSize = $("input:radio[name=size]:checked").val();
     $("#name").text(inputName);
     $("#size").text(inputSize);
+    $("#phone").text(inputPhone);
+    $("#address").text(inputAddress);
     let pizza = new Pizza(inputSize, topArray);
     let sizeVal = pizza.sizePrice();
     let toppingsVal = pizza.toppingsPrice();

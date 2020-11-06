@@ -14,32 +14,23 @@
         <div class="col-md-6">
           <hr>
           <h2>Place your order</h2>
-          <form id="pizzaOrder">
+          <form id="order">
             <div class="form-group">
-              <label for="name"><strong>Your Name:</strong></label>
-              <input type="text"  class="form-control" id="name">
-            </div>
-            <div class="form-check">
-              <label for="dough"><strong>Dough:</strong></label><br>
-              <input class="form-check-input" type="radio" name="dough" id="regular" value="regular">
-              <label class="form-check-label" for="regular">Regular</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="dough" id="keto" value="keto">
-              <label class="form-check-label" for="keto">Keto</label>
+              <label for="firstName"><strong>Name:</strong></label>
+              <input type="text"  class="form-control" id="firstName">
             </div>
             <br>
             <div class="form-check">
               <label for="pickSize"><strong>Size:</strong></label><br>
-              <input class="form-check-input" type="radio" name="size" id="small" value="small">
+              <input class="form-check-input" type="radio" name="size" id="small" value="Small">
               <label class="form-check-label" for="small">Small</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="size" id="medium" value="medium">
+              <input class="form-check-input" type="radio" name="size" id="medium" value="Medium">
               <label class="form-check-label" for="medium">Medium</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="size" id="large" value="large">
+              <input class="form-check-input" type="radio" name="size" id="large" value="Large">
               <label class="form-check-label" for="large">Large</label>
             </div>
             <br>
@@ -66,16 +57,16 @@
               <label class="form-check-label" for="cheese">Cheese </label>
             </div>
             <br>
-            <div class="form-group">
-              <label for="new-phone-number"><strong>Phone Number</strong></label>
-              <input type="text"  class="form-control" id="new-phone-number">
-            </div>
-            <div class="form-group">
-              <label for="new-physical-address"><strong>Address</strong></label>
-              <input type="text" class="form-control" id="physical-address">
-            </div>
-            <button type="submit" class="btn-primary">Place</button>
+            <button type="submit" class="btn-primary">Place Order</button>
           </form>
+          <div class="col-md-6">
+            <div id="result">
+              <p>Name: <span id = "name"></span></p>
+              <p>Size: <span id = "size"></span></p>
+              <p>Toppings: <span id = "toppings"></span></p>
+              <p><strong>TOTAL:</strong><span id = "total"></span></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

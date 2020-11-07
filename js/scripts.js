@@ -1,3 +1,4 @@
+//BI Logic
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
@@ -29,7 +30,7 @@ Pizza.prototype.toppingsPrice = function() {
   }
 }
 
-//BI LOGIC
+//UI Logic
 $(document).ready(function(){
   $("form#order").submit(function(event) {
     event.preventDefault();
@@ -37,8 +38,8 @@ $(document).ready(function(){
     let topArray = [];
     $("input:checkbox[name=top]:checked").each(function(){
     let inputTop = $(this).val();
-    topArray.push(inputTop);
     $("#toppings").text(inputTop);
+    topArray.push(inputTop);      // can't figure out how to list them all      
     });
     let inputName = $("#iName").val();
     let inputPhone = $("#iPhone").val();
@@ -54,3 +55,6 @@ $(document).ready(function(){
     pizza.price(sizeVal, toppingsVal);
   });
 });
+
+
+
